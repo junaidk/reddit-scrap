@@ -18,6 +18,7 @@ import (
 )
 
 const basePath = "/path/to/download/"
+const linkFilePath = "/path/to/reddit_export.html"
 const paralledDownload = 4
 
 var dlinks uint64
@@ -35,7 +36,7 @@ func main() {
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 	// file obtained with
 	// https://redditmanager.com/
-	dat, err := ioutil.ReadFile("/path/to/reddit_export.html")
+	dat, err := ioutil.ReadFile(linkFilePath)
 
 	if err != nil {
 		fmt.Println(err.Error())
